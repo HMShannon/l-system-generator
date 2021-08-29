@@ -1,13 +1,187 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+html {
+  height: 100vh;
+  width: 100vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#canvas {
+  width: 50%;
+  height: 100%;
+}
+
+#controls {
+  height: 100%;
+  width: 50%;
+  background: rgb(60, 60, 60);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.menu-item {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1px;
+}
+
+.menu-item p {
+  margin: 5px;
+}
+
+.menu-key {
+  min-width: 40px;
+}
+
+.control-item {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -7px;
+}
+
+.control-item input {
+  width: 110px;
+  margin-left: 4px;
+}
+
+.control-item button {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: none;
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+.rule-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.rule-item p {
+  margin-right: 5px;
+}
+
+#controls p {
+  color: rgb(200, 200, 200);
+}
+
+#controls input {
+  background-color: rgb(220, 220, 220);
+  border: none;
+}
+
+#color-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 114px;
+  align-items: center;
+  align-content: center;
+}
+
+#color-pickers {
+  display: flex;
+  flex-direction: column;
+}
+
+#color-pickers .color-picker {
+  width: 30px;
+  margin: 8px;
+  margin-left: 0;
+}
+
+#color-preview {
+  height: 35px;
+  width: 35px;
+  border: 1px solid black;
+}
+
+@media (min-width: 700px) {
+  #canvas {
+    width: 60%;
+  }
+  #controls {
+    width: 40%;
+  }
+  .control-item input {
+    width: 110px;
+  }
+}
+
+@media (min-width: 900px) {
+  .control-item input {
+    width: 130px;
+  }
+
+  #canvas {
+    width: 70%;
+  }
+  #controls {
+    width: 30%;
+  }
+  #color-controls {
+    width: 134px;
+  }
+
+}
+
+@media (min-width: 1070px) {
+
+  #controls {
+    width: 30%;
+  }
+
+  #color-controls {
+    width: 114px;
+  }
+
+  .menu-item {
+    width: 90%;
+    margin: 5px;
+  }
+
+  .control-item input {
+    width: 110px;
+  }
+
+}
+
+@media only screen and (orientation:portrait) {
+  .App {
+    flex-direction: column;
+  }
+  #canvas {
+    width: 100%;
+    height: 75%;
+  }
+  #controls {
+    width: 100%;
+    height: 25%;
+  }
 }
