@@ -2,7 +2,7 @@ Inspired by [The Algorithmic Beauty of Plants](https://en.wikipedia.org/wiki/The
 
 Lindermayer systems, or l-systems, are a type of grammar that can be used to generate self-similar fractals and plant-like structures. An l-system is defined by an initial state(an axiom) and a set of rules to be applied iteratively to the axiom. For example:
 
-Axiom: F
+Axiom: F \
 Rule : F -> F+F--F+F
 
 After one iteration, the result is : F+F--F+F
